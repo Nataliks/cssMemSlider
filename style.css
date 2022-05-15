@@ -1,1 +1,166 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #d4a752;
+}
+
+.wrapper {
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1vw auto 0;
+  overflow: hidden;
+  background-color: #f5e1bf;
+  border-radius: 1rem;
+  border: 0.5rem solid #b44f1e;
+}
+
+.slider {
+  width: 100%;
+}
+
+.slider-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 500%;
+}
+
+.wrapper > input {
+  display: none;
+}
+
+.slides {
+  width: 20%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.slides img {
+  width: 100%;
+}
+
+.titles {
+  width: 70%;
+  overflow: hidden;
+}
+
+.title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 500%;
+  overflow: hidden;
+}
+
+.slider-title {
+  width: 20%;
+  padding: 0 0.2rem 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  color: #161515;
+  opacity: 0;
+}
+
+.wrapper label {
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 50%;
+  -webkit-transition: background ease-in-out .5s;
+  transition: background ease-in-out .5s;
+}
+
+.controls label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 0.13rem solid #4e4e46;
+  -webkit-box-shadow: 0 0 0.13rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 0.13rem rgba(0, 0, 0, 0.3);
+}
+
+.controls {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#slide1:checked ~ .titles > .title-wrapper > .title1,
+#slide2:checked ~ .titles > .title-wrapper > .title2,
+#slide3:checked ~ .titles > .title-wrapper > .title3,
+#slide4:checked ~ .titles > .title-wrapper > .title4,
+#slide5:checked ~ .titles > .title-wrapper > .title5 {
+  opacity: 1;
+}
+
+#slide1:checked ~ .titles > .title-wrapper > .title1 {
+  margin-left: 0;
+}
+
+#slide2:checked ~ .titles > .title-wrapper > .title1 {
+  margin-left: -20%;
+}
+
+#slide3:checked ~ .titles > .title-wrapper > .title1 {
+  margin-left: -40%;
+}
+
+#slide4:checked ~ .titles > .title-wrapper > .title1 {
+  margin-left: -60%;
+}
+
+#slide5:checked ~ .titles > .title-wrapper > .title1 {
+  margin-left: -80%;
+}
+
+#slide1:checked ~ .slider > .slider-wrapper > .slide1 {
+  margin-left: 0;
+}
+
+#slide2:checked ~ .slider > .slider-wrapper > .slide1 {
+  margin-left: -20%;
+}
+
+#slide3:checked ~ .slider > .slider-wrapper > .slide1 {
+  margin-left: -40%;
+}
+
+#slide4:checked ~ .slider > .slider-wrapper > .slide1 {
+  margin-left: -60%;
+}
+
+#slide5:checked ~ .slider > .slider-wrapper > .slide1 {
+  margin-left: -80%;
+}
+
+.wrapper label:hover,
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4),
+#slide5:checked ~ .controls label:nth-of-type(5) {
+  background: #bd7a37;
+}
+/*# sourceMappingURL=style.css.map */
