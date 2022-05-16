@@ -10,7 +10,7 @@ body {
 }
 
 .wrapper {
-  width: 50vw;
+  width: 53vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,11 +23,38 @@ body {
   overflow: hidden;
   background-color: #f5e1bf;
   border-radius: 1rem;
-  border: 0.5rem solid #b44f1e;
+  border: 0.2rem solid #b44f1e;
+}
+
+@media (max-width: 890px) {
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 65vw;
+    margin: 10vw auto 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .wrapper {
+    width: 90vw;
+    margin: 20vw auto 0;
+    border: 0.3rem solid #b44f1e;
+  }
 }
 
 .slider {
   width: 100%;
+}
+
+@media (max-width: 767px) {
+  .slider {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .slider-wrapper {
@@ -49,11 +76,28 @@ body {
 
 .slides img {
   width: 100%;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
 }
 
 .titles {
   width: 70%;
   overflow: hidden;
+}
+
+@media (max-width: 1035px) {
+  .titles {
+    width: 65%;
+  }
+}
+
+@media (max-width: 890px) {
+  .titles {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 100%;
+  }
 }
 
 .title-wrapper {
@@ -70,14 +114,26 @@ body {
   -webkit-transition: 1s;
   transition: 1s;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #161515;
   opacity: 0;
 }
 
+@media (max-width: 1035px) {
+  .slider-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .slider-title {
+    padding: 0 0 0 0.2rem;
+  }
+}
+
 .wrapper label {
   cursor: pointer;
-  margin: 10px;
+  margin: 0.7rem;
   border-radius: 50%;
   -webkit-transition: background ease-in-out .5s;
   transition: background ease-in-out .5s;
@@ -94,6 +150,14 @@ body {
           box-shadow: 0 0 0.13rem rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 320px) {
+  .controls label {
+    width: 0.7rem;
+    height: 0.7rem;
+    border: 0.13rem solid #4e4e46;
+  }
+}
+
 .controls {
   width: 30%;
   display: -webkit-box;
@@ -105,6 +169,21 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 1035px) {
+  .controls {
+    width: 35%;
+  }
+}
+
+@media (max-width: 767px) {
+  .controls {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 10.2rem;
+  }
 }
 
 #slide1:checked ~ .titles > .title-wrapper > .title1,
